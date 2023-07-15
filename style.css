@@ -70,6 +70,8 @@ body {
     transform: skewY(-35deg);
 }
 
+.machine .machine-main .machine-body::before,
+.machine .machine-main .machine-body::after,
 .machine .machine-roof .machine-silencer::before,
 .machine .machine-roof .machine-silencer::after {
     content: "";
@@ -88,6 +90,41 @@ body {
     animation: moveSmoke .5s linear infinite;
 }
 
+.machine-main {
+    height: 60px;
+    width: 185px;
+    position: relative;
+}
+
+.machine .machine-main .machine-body {
+    height: inherit;
+    width: inherit;
+    position: relative;
+    background: #271e01;
+}
+
+.machine .machine-main .machine-body::before {
+    left: -15px;
+    width: 30px;
+    height: inherit;
+    background: inherit;
+    transform: skewY(-20deg);
+}
+
+.machine .machine-main .machine-body::after {
+    bottom: 0;
+    right: 15px;
+    width: 35px;
+    height: 41px;
+    background: #ffc600;
+}
+
+.machine .machine-main .machine-back {
+    bottom: -1px;
+    width: 75px;
+    height: 45px;
+    position: absolute;
+}
 
 @keyframes moveSmoke {
     0% {
@@ -100,7 +137,7 @@ body {
     }
 
     100% {
-        opacity: 0;
+        opacity: .6;
         transform: scale(1) translate(-10px, -40px);
     }
 }
